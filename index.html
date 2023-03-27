@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- если нужно несколько одинаковых классов то ставим умножение slider*5 чтобы сэкономить время заполенения нужно писать div вот так slider>.slider*5>.slide__content>.slide__icon+.slide__title{Slide $}+.slide__desc{You can add description} -->
+<div class="slider">
+    <!-- style="--bg: url() создаем переменную var и просто добавляем к нужному слайдеру -->
+    <div class="slide" style="--bg: url(https://www.tourprom.ru/site_media/images/upload/2016/9/6/poiphoto/restaurante-casa-lever-entrada-e-vinho_NGfNds3.jpg)">
+        <div class="slide__content">
+            <div class="slide__icon"><span class="material-symbols-outlined">
+                star_rate
+                </span></div>
+                <!-- <div>slide__title, slide__desc</div> оборачивваем в div чтобы можно было выравнить заголовок -->
+                <div>
+            <div class="slide__title">Beach</div>
+            <div class="slide__desc">Coastline 😍</div>
+        </div>
+    </div>
+    </div>
+    <div class="slide" style="--bg: url(https://pbs.twimg.com/media/Coo5U_YWAAAeS2w.jpg)">
+        <div class="slide__content">
+            <div class="slide__icon"><span class="material-symbols-outlined">
+                swipe_up_alt
+                </span></div>
+                <div>
+            <div class="slide__title">Lake</div>
+            <div class="slide__desc">Appeasment 😇</div>
+        </div>
+        </div>
+    </div>
+    <div class="slide" style="--bg: url(https://media.baamboozle.com/uploads/images/529752/1637620832_185287.jpeg)">
+        <div class="slide__content">
+            <div class="slide__icon"><span class="material-symbols-outlined">
+                rocket_launch
+                </span></div>
+                <div>
+            <div class="slide__title">New York</div>
+            <div class="slide__desc">Jungle power 👻</div>
+        </div>
+        </div>
+    </div>
+    <div class="slide" style="--bg: url(http://www.dsibike.com/public/images/slider1.jpg)">
+        <div class="slide__content">
+            <div class="slide__icon"><span class="material-symbols-outlined">
+                thunderstorm
+                </span></div>
+                <div>
+            <div class="slide__title">Downhill</div>
+            <div class="slide__desc">Memories 🙂</div>
+        </div>
+        </div>
+    </div>
+    <div class="slide" style="--bg: url(https://images.wallpaperscraft.com/image/single/night_city_road_buildings_171203_2560x1440.jpg)">
+        <div class="slide__content">
+            <div class="slide__icon"><span class="material-symbols-outlined">
+                offline_bolt
+                </span></div>
+                <div>
+            <div class="slide__title">Hong Kong</div>
+            <div class="slide__desc">Dream 🥰</div>
+        </div>
+        </div>
+    </div>
+    <div class="slide" style="--bg: url(https://i.pinimg.com/originals/e1/0b/72/e10b724a29c4a72fa50057cad87d12b3.jpg)">
+        <div class="slide__content">
+            <div class="slide__icon"><span class="material-symbols-outlined">
+                coronavirus
+                </span>
+                </div>
+                <div>
+            <div class="slide__title">Star wars</div>
+            <div class="slide__desc">Dark side 😈</div>
+        </div>
+        </div>
+    </div>
+    <div class="slide" style="--bg: url(https://i.artfile.ru/2048x1333_718204_[www.ArtFile.ru].jpg)">
+        <div class="slide__content">
+            <div class="slide__icon"><span class="material-symbols-outlined">
+                partly_cloudy_night
+                </span></div>
+                <div>
+            <div class="slide__title">San Francisco</div>
+            <div class="slide__desc">Dream 🥰</div>
+        </div>
+        </div>
+    </div>
+</div>
+  <script src="main.js"></script>  
+</body>
+</html>

@@ -1,0 +1,144 @@
+
+/* делаем стили для слайдера */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Nunito:wght@400;700&family=Open+Sans&display=swap');
+
+:root {
+    --transition: all 0.5s ease-in-out;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+     font-family: 'Nunito', sans-serif;;
+     display: grid;
+     align-items: center;
+     justify-items: center;
+     height: 100vh;
+}
+/*  все что без active, то это значения по умолчанию, когда слйдер закрыт, а с active  развернутое состояние */
+.slider {
+    display: flex;
+    height: 600px;
+   gap: 16px;
+ 
+}
+.slide {
+    width: 59px;
+    background: var(--bg) center / auto 100%;
+    border-radius: 32px;
+    display: grid;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    /* можно делать картинки не цветным */
+    /* filter: saturate(0%); */
+    /* и эффект размытия */
+    /* filter: blur(3px); */
+}
+.slide.active {
+    width: 780px;
+    /* создаем эффект глубины слайда */
+    box-shadow: 0 32px 64px rgba(0,0,0,0.7);
+    /* создаем эффект увеличения картинки */
+    background-size: auto 117%;
+    /* filter: saturate(100%); */
+    /* filter: blur(0px) */
+}
+
+/* делаем нижнее затемнение на картинках */
+.slide::before {
+content: '';
+display: block;
+position: absolute;
+/* растягиваем картинку */
+left: 0;
+right: 0;
+bottom: 0;
+height: 100px;
+/* делаем затемнение */
+background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+}
+
+.slide__content {
+    --size: 40px;
+    /* выравнивает контент по вертикали */
+  align-self: end;
+  color: white;
+  padding: 10px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: var(--size) 1fr;
+  grid-gap: 8px;
+  line-height: 1.2em;
+  /* чтобы описание было не темным, нужно указать position:relative и тогда надпись будет над темнотой */
+  position: relative;
+  transition: var(--transition);
+}
+
+.slide.active.slide__content {
+ padding: 20px;
+}
+  
+.slide__icon {
+    height: var(--size);
+    background-color: white;
+    border-radius: 100px;
+    display: grid;
+    align-self: end;
+    align-items: center;
+    justify-items: center;
+    font-size: 25px;
+}
+/* делаем круг для иконки */
+.slide__icon .material-symbols-outlined {
+    font-size: calc(var(--size)) / 0.3;
+    color: yellowgreen;
+
+}
+/* меняем цвет иконок для каждой */
+.slide:nth-child(2) .material-symbols-outlined {
+  color: blue;
+}
+.slide:nth-child(3) .material-symbols-outlined {
+    color: orange;
+  }
+  .slide:nth-child(4) .material-symbols-outlined {
+    color: #ff5353;
+  }
+  .slide:nth-child(5) .material-symbols-outlined {
+    color: darkorange;
+  }
+  .slide:nth-child(6) .material-symbols-outlined {
+    color: red;
+  }
+  .slide:nth-child(7) .material-symbols-outlined {
+    color: rgba(18, 18, 205, 0.263);
+  }
+
+.slide__title {
+    font-size: 18px;
+    font-weight: bold;
+}
+/* делаем анамацию для текста и описания */
+.slide__title,
+.slide__desc {
+    transition: var(--transition) 0.2;
+    opacity: 0;
+    margin-left: 16px;
+}
+.slide.active .slide__title,
+.slide.active .slide__desc {
+    opacity: 1;
+    margin-left: 0;
+}
+
+/* icons скачиваем на fonts.google.com/icons=> копируем  */
+
+.material-symbols-outlined {
+  font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 48;
+}
+
